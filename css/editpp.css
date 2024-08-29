@@ -1,0 +1,244 @@
+body {
+    background: linear-gradient(#62cff4,#2c67f2);
+    font-family: 'Open Sans', sans-serif;
+    height: 100vh;
+    display:flex;
+    align-items: center;
+    justify-content:center;
+}
+
+.closeBtn{
+    position:absolute;
+    top:0;
+    right: 5px   ;
+    text-decoration:none;
+    color:#fff;
+    font-size: 30px;
+}
+
+.container {
+    max-width: 700px;
+    margin: auto;
+    padding: 20px;
+    background: linear-gradient(blue,rgb(152, 17, 241));
+    border-radius:10px; 
+    position:relative;
+}
+
+h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin: 20px 0 20px;
+    font-weight: 600;
+    color:#FFFFFF;
+}
+
+.avatar-upload {
+    position: relative;
+    max-width: 205px;
+    top:0;
+    margin: auto;
+    z-index: 99;
+    margin-top:-100px;
+    .avatar-edit {
+        position: absolute;
+        right: 12px;
+        z-index: 1;
+        top: 138px;
+        input {
+            display: none;
+            + label {
+                display: inline-block;
+                width: 50px;
+                height: 50px;
+                background-color:#FFFFFF;
+                border-radius:100%;
+                margin-bottom: 0;
+                cursor: pointer;
+                font-weight: normal;
+                transition: all .2s ease-in-out;
+                &:after {
+                    content: url(../imgJkt/camera.png);
+                    position: absolute;
+                    top: 10px;
+                    left: 0;
+                    right: 0;
+                    text-align: center;
+                    margin: auto;
+                }
+            }
+        }
+    }
+
+    .avatar-preview {
+        width: 192px;
+        height: 192px;
+        position: relative;
+        border-radius: 100%;
+        border: 6px solid #F8F8F8;
+        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+        > div {
+            width: 100%;
+            height: 100%;
+            border-radius: 100%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+}
+
+.thumbnail {
+    position: relative;
+    margin:auto;
+    .contentThumb {
+        position: absolute;
+        right: 70px;
+        z-index: 1;
+        top: 166px;
+        input {
+            display: none;
+            + label {
+                display: inline-block;
+                width: 50px;
+                height: 50px;
+                border-radius:100%;
+                margin-bottom: 0;
+                background-color:#FFFFFF;
+                cursor: pointer;
+                font-weight: normal;
+                transition: all .2s ease-in-out;
+                &::before{
+                    content:("Add Cover Photo");
+                }
+                &:after {
+                    content: url(../imgJkt/camera.png);
+                    font-family: 'FontAwesome';
+                    color: #757575;
+                    position: absolute;
+                    top: 10px;
+                    left: 0;
+                    right: 0;
+                    text-align: center;
+                    margin: auto;
+                }
+            }
+        }
+    }
+}
+
+.thumbnail-preview {
+    margin:auto;
+    width: 500px;
+    height: 200px;
+    position: relative;
+    border-radius: 10px;
+    border: 6px solid #F8F8F8;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+    > div {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+/* input text */
+@import url("https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@600&display=swap");
+
+.center {
+  position: relative;
+  padding: 50px 50px;
+  border-radius: 10px;
+  font-weight: 600;
+  margin-top: -70px;
+}
+.center .inputbox {
+  position: relative;
+  width: 300px;
+  height: 50px;
+  margin-bottom: 50px;
+  margin:37px auto;
+}
+.center .inputbox input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border: 2px solid #ffffff;
+  color:#fff;
+  outline: none;
+  background: none;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 1.2em;
+}
+.center .inputbox:last-child {
+  margin-bottom: 0;
+}
+.center .inputbox span {
+  position: absolute;
+  color:#FFFFFF;
+  top: 14px;
+  left: 20px;
+  font-size: 1em;
+  transition: 0.6s;
+  font-family: sans-serif;
+}
+.center .inputbox input:focus ~ span,
+.center .inputbox input:valid ~ span {
+  transform: translateX(-13px) translateY(-35px);
+  font-size: 1em;
+}
+.center .inputbox button {
+  width: 100%;
+  height: 50px;
+  font-size: 1em;
+  border-radius: 10px;
+  background: dodgerblue;
+  color: #ffffff;
+  border: #fff;
+}
+.center .inputbox:hover button {
+  background: linear-gradient(45deg, rgb(37, 72, 148), dodgerblue);
+}
+
+.center .inputbox textarea {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 140px;
+    border: 2px solid #ffffff;
+    color:#fff;
+    outline: none;
+    background: none;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 1.2em;
+  }
+
+  ::placeholder{
+    color:#fff;
+  }
+
+  .center .inputbox:last-child {
+    margin-bottom: 0;
+  }
+  .center .inputbox span {
+    position: absolute;
+    color:#FFFFFF;
+    top: 14px;
+    left: 20px;
+    font-size: 1em;
+    transition: 0.6s;
+    font-family: sans-serif;
+  }
+  .center .inputbox textarea:focus ~ span,
+  .center .inputbox textarea:valid ~ span {
+    transform: translateX(-13px) translateY(-35px);
+    font-size: 1em;
+  }
+
