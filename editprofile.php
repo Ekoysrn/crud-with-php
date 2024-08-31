@@ -13,7 +13,7 @@ $data = query("SELECT * FROM users WHERE id = '$id'")[0];
 
 
 if (isset($_POST["submit"])) {
-  if (change_profile($_POST) > 0 && change_datauser($_POST) > 0) {
+  if (change_profile($_POST) > 0 || change_datauser($_POST) > 0) {
     echo "<script>
                 alert('update profile successfull');
                 window.location.href = 'pp.php';
